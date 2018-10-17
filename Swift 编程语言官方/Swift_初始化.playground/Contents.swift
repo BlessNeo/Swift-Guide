@@ -31,6 +31,8 @@ print("The default temperature is \(f.temperature)° Fahrenheit")
 struct FahrenheitSimple {
     var temperature = 32.0
 }
+//自定义初始化
+//初始化形式参数
 //你可以提供初始化形式参数作为初始化器的一部分，来定义初始化过程中的类型和值的名称。初始化形式参数与函数和方法的形式参数具有相同的功能和语法
 struct Celsius {
 var temperatureInCelsius: Double
@@ -45,3 +47,93 @@ let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
 // boilingPointOfWater.temperatureInCelsius is 100.0
 let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 // freezingPointOfWater.temperatureInCelsius is 0.0
+
+//形式参数名和实际参数标签
+//与函数和方法的形式参数一样，初始化形式参数也可以在初始化器内部有一个局部变量名以及实际参数标签供调用的时候使用。
+//总之，初始化器并不能像函数和方法那样在圆括号前面有一个用来区分的函数名。因此，一个初始化器的参数名称和类型在识别该调用哪个初始化器的时候就扮演了一个非常重要的角色。因此，如果你没有提供外部名 Swift 会自动为每一个形式参数提供一个外部名称。
+
+struct Color {
+    let red, green, blue: Double
+    init(red: Double, green: Double, blue: Double) {
+        self.red   = red
+        self.green = green
+        self.blue  = blue
+    }
+    init(white: Double) {
+        red   = white
+        green = white
+        blue  = white
+    }
+}
+
+let magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
+let halfGray = Color(white: 0.5)
+//注意不使用外部名称是不能调用这些初始化器的。如果定义了外部参数名就必须用在初始化器里，省略的话会报一个编译时错误：
+//let veryGreen = Color(0.0, 1.0 ,0.0)
+//Missing argument labels 'red:green:blue:' in call
+
+//无实际参数标签的初始化器形式参数
+//如果你不想为初始化器形式参数使用实际参数标签，可以写一个下划线( _ )替代明确的实际参数标签以重写默认行为。
+struct Celsius1 {
+    var temperatureInCelsius: Double
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+    init(_ celsius: Double) {
+        temperatureInCelsius = celsius
+    }
+}
+let bodyTemperature = Celsius1(37.0)
+// bodyTemperature.temperatureInCelsius is 37.0
+//调用初始化器 Celsius(37.0) 有着清楚的意图而不需要外部形式参数名。因此，把初始化器写为 init(_ celsius: Double) 是合适的，它也就可以通过提供未命名的 Double 值被调用了。
+//可选属性类型
+//如果你的自定义类型有一个逻辑上是允许“无值”的存储属性——大概因为它的值在初始化期间不能被设置，或者因为它在稍后允许设置为“无值”——声明属性为可选类型。可选类型的属性自动地初始化为 nil ，表示该属性在初始化期间故意设为“还没有值”。
+class SurveyQuestion {
+    var text: String
+    var respinse: String?
+    init(text: String) {
+        self.text = text
+    }
+    func ask() {
+        print(text)
+        print(respinse as Any)
+    }
+}
+
+let cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
+cheeseQuestion.ask()
+cheeseQuestion.respinse = "Yes, I do like cheese"
+cheeseQuestion.ask()
+//对调查问题的回答直到被问的时候才能知道，所以 response 属性被声明为 String? 类型，或者是“可选 Stirng ”。当新的 SurveyQuestion 实例被初始化的时候，它会自动分配一个为 nil 的默认值，意味着“还没有字符串”。
+//在初始化中分配常量属性
+//在初始化的任意时刻，你都可以给常量属性赋值，只要它在初始化结束是设置了确定的值即可。一旦为常量属性被赋值，它就不能再被修改了。
+//你可以修改上面 SurveyQuestion 的例子，给 text 使用常量属性而不是变量属性来表示问题，来明确一旦 SurveyQuestion 的实例被创建，那个问题将不会改变。尽管现在 text 属性是一个常量，但是它依然可以在类的初始化器里设置：
+
+class SurveyQuestion1 {
+    let text: String
+    var response: String?
+    init(text: String) {
+        self.text = text
+    }
+    func ask() {
+        print(text)
+    }
+}
+let beetsQuestion = SurveyQuestion1(text: "How about beets?")
+beetsQuestion.ask()
+// prints "How about beets?"
+beetsQuestion.response = "I also like beets. (But not with cheese.)"
+//默认初始化器
+//Swift 为所有没有提供初始化器的结构体或类提供了一个默认的初始化器来给所有的属性提供了默认值。这个默认的初始化器只是简单地创建了一个所有属性都有默认值的新实例。
+
+class ShoppingListItem {
+    var name: String?
+    var quantity = 1
+    var purchased = false
+}
+var item = ShoppingListItem()
+//由于 ShoppingListItem 类的所有属性都有默认值(如果没有的话报错error: 'ShoppingListItem' cannot be constructed because it has no accessible initializers)，又由于它是一个没有父类的基类， ShoppingListItem 类自动地获得了一个默认的初始化器，使用默认值设置了它的所有属性然后创建了新的实例。( name 属性是一个可选 String 属性，所以它会自动设置为 nil 默认值，尽管这个值没有写在代码里。)上面的栗子给 ShoppingListItem 类使用默认初始化器以及初始化器语法创建新的实例，写作 ShoppingListItem() ，并且给这个新实例赋了一个名为 item 的变量。
+
