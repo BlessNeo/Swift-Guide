@@ -300,4 +300,225 @@ for thing in things {
 }
 
 //协议继承
+//协议可以继承一个或者多个其他协议并且可以在它继承的基础之上添加更多要求。协议继承的语法与类继承的语法相似，只不过可以选择列出多个继承的协议，使用逗号分隔
+protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+    // protocol definition goes here
+}
 
+protocol PrettyTextRepresentable: TextRepresentable {
+    var prettyTextDescription: String { get }
+}
+
+//这个例子定义了一个新的协议 PrettyTextRepresentable ，它继承自 TextRepresentable 。任何采用了 PrettyTextRepresentable 的类型都必须满足所有 TextRepresentable 强制的需要，另外还有 PrettyTextRepresentable 强制的要求。在这个例子中， PrettyTextRepresentable 添加了一个叫做 prettyTextualDescription 的可读属性，它返回一个 String 。
+extension SnackAndadders: PrettyTextRepresentable {
+    var prettyTextDescription: String {
+        var output = textualDescription + ":\n"
+        for index in 1...finalSquare {
+            switch board[index] {
+            case let ladder where ladder > 0:
+                output += "▲"
+            case let snake where snake < 0:
+                output += "▼ "
+            default:
+                output += "○ "
+            }
+        }
+        return output
+    }
+    
+}
+
+print(game.prettyTextDescription)
+//类专用的协议
+//通过添加 AnyObject 关键字到协议的继承列表，你就可以限制协议只能被类类型采纳（并且不是结构体或者枚举）
+//protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
+//    // class-only protocol definition goes here
+//}
+//在上边的例子当中， SomeClassOnlyProtocol 只能被类类型采纳。如果在结构体或者枚举中尝试采纳 SomeClassOnlyProtocol 就会出发编译时错误。
+//注意在协议的要求假定或需要遵循的类型拥有引用语意的时候使用类专用的协议而不是值语意。要了解更多关于引用和值语意，见结构体和枚举是值类型和类是引用类型。
+//协议组合
+//要求一个类型一次遵循多个协议是很有用的。你可以使用协议组合来复合多个协议到一个要求里。协议组合行为就和你定义的临时局部协议一样拥有构成中所有协议的需求。协议组合不定义任何新的协议类型。
+//协议组合使用 SomeProtocol & AnotherProtocol 的形式。你可以列举任意数量的协议，用和符号连接（ & ），使用逗号分隔。除了协议列表，协议组合也能包含类类型，这允许你标明一个需要的父类
+protocol Named {
+    var name: String { get }
+}
+
+protocol Aged {
+    var age: Int { get }
+}
+
+struct Person0: Named, Aged {
+    var name: String
+    
+    var age: Int
+    
+    
+}
+
+func wishHappyBirthday(to celebrator: Named & Aged) {
+    print("Happy birthday, \(celebrator.name), you're \(celebrator.age)")
+}
+
+let birthdayPerson = Person0(name: "Malcolm", age: 21)
+wishHappyBirthday(to: birthdayPerson)
+//例子中同样定义了一个叫做 wishHappyBirthday(to:) 的函数， celebrator 形式参数的类型是 Named & Aged ，这意味着“任何同时遵循 Named 和 Aged 的协议。”它不关心具体是什么样的类型传入函数，只要它遵循这两个要求的协议即可。
+class Location {
+    var latitude: Double
+    var longitude: Double
+    init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+}
+
+class City: Location, Named {
+    var name: String
+    
+    init(name: String, latitude: Double, longitude: Double) {
+        self.name = name
+        super.init(latitude: latitude, longitude: longitude)
+    }
+}
+
+func beginConcert(in location: Location & Named) {
+    print("Hello, \(location.name)")
+}
+
+let seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
+beginConcert(in: seattle)
+//协议遵循的检查
+//你可以使用类型转换中描述的 is 和 as 运算符来检查协议遵循，还能转换为特定的协议。检查和转换协议的语法与检查和转换类型是完全一样的
+    //如果实例遵循协议is运算符返回 true 否则返回 false ；
+   // as? 版本的向下转换运算符返回协议的可选项，如果实例不遵循这个协议的话值就是 nil ；
+    //    as! 版本的向下转换运算符强制转换协议类型并且在失败是触发运行时错误。
+protocol HasArea {
+    var area: Double { get }
+}
+class Circle: HasArea {
+    var area: Double { return pi * radius * radius }
+    
+    let pi = 3.1415927
+    var radius: Double
+    init(radius: Double) {
+        self.radius = radius
+    }
+}
+
+class Country: HasArea {
+    var area: Double
+    
+    init(area: Double) {
+        self.area = area
+    }
+}
+
+class Animal {
+    var legs: Int
+    init(legs: Int) {
+        self.legs = legs
+    }
+}
+
+let objects: [AnyObject] = [
+    Circle(radius: 2.0),
+    Country(area: 243_610),
+    Animal(legs: 4)
+]
+
+for object in objects {
+    if let objectWithArea = object as? HasArea {
+        print("Area is \(objectWithArea.area)")
+    } else {
+        print("Something that doesn't have an area")
+    }
+}
+
+//注意使用的对象并没有通过转换过程而改变。他们仍然是 Circle 、 Country 和 Animal 。总之，在储存在 objectWithArea 常量中的那一刻，他们仅被所知为 HasArea ，所以只有 area 属性可以访问。
+//可选协议要求
+//你可以给协议定义可选要求，这些要求不需要强制遵循协议的类型实现。可选要求使用 optional 修饰符作为前缀放在协议的定义中。可选要求允许你的代码与 Objective-C 操作。协议和可选要求必须使用 @objc 标志标记。注意 @objc 协议只能被继承自 Objective-C 类或其他 @objc 类采纳。它们不能被结构体或者枚举采纳。
+//当你在可选要求中使用方法或属性是，它的类型自动变成可选项。比如说，一个 (Int) -> String 类型的方法会变成 ((Int) -> String)? 。注意是这个函数类型变成可选项，不是方法的返回值。
+//可选协议要求可以在可选链中调用，来说明要求没有被遵循协议的类型实现的概率。你可以通过在调用方法的时候在方法名后边写一个问号来检查它是否被实现，比如 someOptionalMethod?(someArgument) 。
+
+@objc protocol CounterDataSource {
+    @objc optional func increment(forCount count: Int) -> Int
+    @objc optional var fixedIncrement: Int { get }
+}
+
+//严格来讲，你可以写一个遵循 CounterDataSource 的自定义类而不实现任何协议要求。反正它们都是可选的。尽管技术上来讲是可以的，但这样的话就不能做一个好的数据源了
+class Counter {
+    var count = 0
+    var dataSource: CounterDataSource?
+    func increment() {
+        if let amount = dataSource?.increment?(forCount: count) {
+            count += amount
+        }else if let amount = dataSource?.fixedIncrement {
+            count += amount
+        }
+    }
+}
+
+class ThreeSource: NSObject, CounterDataSource {
+    let fixedIncrement = 3
+}
+
+var counter = Counter()
+counter.dataSource = ThreeSource()
+for _ in 1...4 {
+    counter.increment()
+    print(counter.count)
+}
+
+@objc class TowardsZeroSource: NSObject, CounterDataSource {
+    func increment(forCount count: Int) -> Int {
+        if count == 0 {
+            return 0
+        } else if count < 0 {
+            return 1
+        } else {
+            return -1
+        }
+    }
+}
+
+counter.count = -4
+counter.dataSource = TowardsZeroSource()
+for _ in 1...5 {
+    counter.increment()
+    print(counter.count)
+}
+//协议扩展
+//协议可以通过扩展来提供方法和属性的实现以遵循类型。这就允许你在协议自身定义行为，而不是在每一个遵循或者在全局函数里定义
+extension RandomNumberGenerator {
+    func randomBool() -> Bool {
+        return random() > 0.5
+    }
+}
+
+//通过给协议创建扩展，所有的遵循类型自动获得这个方法的实现而不需要任何额外的修改
+let generator0 = LinearCongruentialGenerator()
+print("Here is a random number: \(generator0.random())")
+print("And here's a random Boolean: \(generator0.randomBool())")
+//提供默认实现
+//你可以使用协议扩展来给协议的任意方法或者计算属性要求提供默认实现。如果遵循类型给这个协议的要求提供了它自己的实现，那么它就会替代扩展中提供的默认实现
+//通过扩展给协议要求提供默认实现与可选协议要求的区别是明确的。尽管遵循协议都不需要提供它们自己的实现。有默认实现的要求不需要使用可选链就能调用
+//举例来说，继承自 TextRepresentable 的 PrettyTextRepresentable 协议可以给它要求的 prettyTextualDescription 属性提供一个默认实现来简单的返回访问 textualDescription 属性的结果：
+extension PrettyTextRepresentable {
+    var prettyTextDescription: String {
+        return textualDescription
+    }
+}
+
+//给协议扩展添加限制
+//当你定义一个协议扩展，你可以明确遵循类型必须在扩展的方法和属性可用之前满足的限制。如同 Where 分句（此处应有链接）中描述的那样，在扩展协议名字后边使用 where 分句来写这些限制。比如说，你可以给 Collection 定义一个扩展来应用于任意元素遵循上面 TextRepresentable 协议的集合
+extension Collection where Iterator.Element: TextRepresentable {
+    var textualDescription: String {
+        let itemsAsText = self.map { $0.textualDescription }
+        return "[" + itemsAsText.joined(separator: ", ") + "]"
+    }
+}
+let murrayTheHamster = Hamster(name: "Murray")
+let morganTheHamster = Hamster(name: "Morgan")
+let mauriceTheHamster = Hamster(name: "Maurice")
+let hamsters = [murrayTheHamster, morganTheHamster, mauriceTheHamster]
+print(hamsters.textualDescription)
+//如果遵循类型满足了为相同方法或者属性提供实现的多限制扩展的要求，Swift 会使用最匹配限制的实现
