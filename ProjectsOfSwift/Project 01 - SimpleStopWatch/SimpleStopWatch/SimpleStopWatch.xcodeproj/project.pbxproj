@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3068476218950D1003FCBEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3068475218950D1003FCBEA /* AppDelegate.swift */; };
+		D3068478218950D1003FCBEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3068477218950D1003FCBEA /* ViewController.swift */; };
+		D306847B218950D1003FCBEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3068479218950D1003FCBEA /* Main.storyboard */; };
+		D306847D218950D2003FCBEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D306847C218950D2003FCBEA /* Assets.xcassets */; };
+		D3068480218950D2003FCBEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D306847E218950D2003FCBEA /* LaunchScreen.storyboard */; };
+		D306848B218950D3003FCBEA /* SimpleStopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D306848A218950D3003FCBEA /* SimpleStopWatchTests.swift */; };
+		D3068496218950D3003FCBEA /* SimpleStopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3068495218950D3003FCBEA /* SimpleStopWatchUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3068487218950D3003FCBEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D306846A218950D1003FCBEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3068471218950D1003FCBEA;
+			remoteInfo = SimpleStopWatch;
+		};
+		D3068492218950D3003FCBEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D306846A218950D1003FCBEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3068471218950D1003FCBEA;
+			remoteInfo = SimpleStopWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D3068472218950D1003FCBEA /* SimpleStopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleStopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3068475218950D1003FCBEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3068477218950D1003FCBEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D306847A218950D1003FCBEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D306847C218950D2003FCBEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D306847F218950D2003FCBEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3068481218950D2003FCBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3068486218950D3003FCBEA /* SimpleStopWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStopWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D306848A218950D3003FCBEA /* SimpleStopWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStopWatchTests.swift; sourceTree = "<group>"; };
+		D306848C218950D3003FCBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3068491218950D3003FCBEA /* SimpleStopWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStopWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3068495218950D3003FCBEA /* SimpleStopWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStopWatchUITests.swift; sourceTree = "<group>"; };
+		D3068497218950D3003FCBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D306846F218950D1003FCBEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3068483218950D3003FCBEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D306848E218950D3003FCBEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3068469218950D1003FCBEA = {
+			isa = PBXGroup;
+			children = (
+				D3068474218950D1003FCBEA /* SimpleStopWatch */,
+				D3068489218950D3003FCBEA /* SimpleStopWatchTests */,
+				D3068494218950D3003FCBEA /* SimpleStopWatchUITests */,
+				D3068473218950D1003FCBEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3068473218950D1003FCBEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3068472218950D1003FCBEA /* SimpleStopWatch.app */,
+				D3068486218950D3003FCBEA /* SimpleStopWatchTests.xctest */,
+				D3068491218950D3003FCBEA /* SimpleStopWatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3068474218950D1003FCBEA /* SimpleStopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D3068475218950D1003FCBEA /* AppDelegate.swift */,
+				D3068477218950D1003FCBEA /* ViewController.swift */,
+				D3068479218950D1003FCBEA /* Main.storyboard */,
+				D306847C218950D2003FCBEA /* Assets.xcassets */,
+				D306847E218950D2003FCBEA /* LaunchScreen.storyboard */,
+				D3068481218950D2003FCBEA /* Info.plist */,
+			);
+			path = SimpleStopWatch;
+			sourceTree = "<group>";
+		};
+		D3068489218950D3003FCBEA /* SimpleStopWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				D306848A218950D3003FCBEA /* SimpleStopWatchTests.swift */,
+				D306848C218950D3003FCBEA /* Info.plist */,
+			);
+			path = SimpleStopWatchTests;
+			sourceTree = "<group>";
+		};
+		D3068494218950D3003FCBEA /* SimpleStopWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3068495218950D3003FCBEA /* SimpleStopWatchUITests.swift */,
+				D3068497218950D3003FCBEA /* Info.plist */,
+			);
+			path = SimpleStopWatchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3068471218950D1003FCBEA /* SimpleStopWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D306849A218950D3003FCBEA /* Build configuration list for PBXNativeTarget "SimpleStopWatch" */;
+			buildPhases = (
+				D306846E218950D1003FCBEA /* Sources */,
+				D306846F218950D1003FCBEA /* Frameworks */,
+				D3068470218950D1003FCBEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleStopWatch;
+			productName = SimpleStopWatch;
+			productReference = D3068472218950D1003FCBEA /* SimpleStopWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3068485218950D3003FCBEA /* SimpleStopWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D306849D218950D3003FCBEA /* Build configuration list for PBXNativeTarget "SimpleStopWatchTests" */;
+			buildPhases = (
+				D3068482218950D3003FCBEA /* Sources */,
+				D3068483218950D3003FCBEA /* Frameworks */,
+				D3068484218950D3003FCBEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3068488218950D3003FCBEA /* PBXTargetDependency */,
+			);
+			name = SimpleStopWatchTests;
+			productName = SimpleStopWatchTests;
+			productReference = D3068486218950D3003FCBEA /* SimpleStopWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3068490218950D3003FCBEA /* SimpleStopWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D30684A0218950D3003FCBEA /* Build configuration list for PBXNativeTarget "SimpleStopWatchUITests" */;
+			buildPhases = (
+				D306848D218950D3003FCBEA /* Sources */,
+				D306848E218950D3003FCBEA /* Frameworks */,
+				D306848F218950D3003FCBEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3068493218950D3003FCBEA /* PBXTargetDependency */,
+			);
+			name = SimpleStopWatchUITests;
+			productName = SimpleStopWatchUITests;
+			productReference = D3068491218950D3003FCBEA /* SimpleStopWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D306846A218950D1003FCBEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Neo_ZH;
+				TargetAttributes = {
+					D3068471218950D1003FCBEA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D3068485218950D3003FCBEA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D3068471218950D1003FCBEA;
+					};
+					D3068490218950D3003FCBEA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D3068471218950D1003FCBEA;
+					};
+				};
+			};
+			buildConfigurationList = D306846D218950D1003FCBEA /* Build configuration list for PBXProject "SimpleStopWatch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3068469218950D1003FCBEA;
+			productRefGroup = D3068473218950D1003FCBEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3068471218950D1003FCBEA /* SimpleStopWatch */,
+				D3068485218950D3003FCBEA /* SimpleStopWatchTests */,
+				D3068490218950D3003FCBEA /* SimpleStopWatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3068470218950D1003FCBEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3068480218950D2003FCBEA /* LaunchScreen.storyboard in Resources */,
+				D306847D218950D2003FCBEA /* Assets.xcassets in Resources */,
+				D306847B218950D1003FCBEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3068484218950D3003FCBEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D306848F218950D3003FCBEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D306846E218950D1003FCBEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3068478218950D1003FCBEA /* ViewController.swift in Sources */,
+				D3068476218950D1003FCBEA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3068482218950D3003FCBEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D306848B218950D3003FCBEA /* SimpleStopWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D306848D218950D3003FCBEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3068496218950D3003FCBEA /* SimpleStopWatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3068488218950D3003FCBEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3068471218950D1003FCBEA /* SimpleStopWatch */;
+			targetProxy = D3068487218950D3003FCBEA /* PBXContainerItemProxy */;
+		};
+		D3068493218950D3003FCBEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3068471218950D1003FCBEA /* SimpleStopWatch */;
+			targetProxy = D3068492218950D3003FCBEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3068479218950D1003FCBEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D306847A218950D1003FCBEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D306847E218950D2003FCBEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D306847F218950D2003FCBEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3068498218950D3003FCBEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3068499218950D3003FCBEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D306849B218950D3003FCBEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleStopWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.SimpleStopWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D306849C218950D3003FCBEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleStopWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.SimpleStopWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D306849E218950D3003FCBEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleStopWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.SimpleStopWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleStopWatch.app/SimpleStopWatch";
+			};
+			name = Debug;
+		};
+		D306849F218950D3003FCBEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleStopWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.SimpleStopWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleStopWatch.app/SimpleStopWatch";
+			};
+			name = Release;
+		};
+		D30684A1218950D3003FCBEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleStopWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.SimpleStopWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleStopWatch;
+			};
+			name = Debug;
+		};
+		D30684A2218950D3003FCBEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleStopWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.SimpleStopWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleStopWatch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D306846D218950D1003FCBEA /* Build configuration list for PBXProject "SimpleStopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3068498218950D3003FCBEA /* Debug */,
+				D3068499218950D3003FCBEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D306849A218950D3003FCBEA /* Build configuration list for PBXNativeTarget "SimpleStopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D306849B218950D3003FCBEA /* Debug */,
+				D306849C218950D3003FCBEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D306849D218950D3003FCBEA /* Build configuration list for PBXNativeTarget "SimpleStopWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D306849E218950D3003FCBEA /* Debug */,
+				D306849F218950D3003FCBEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D30684A0218950D3003FCBEA /* Build configuration list for PBXNativeTarget "SimpleStopWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D30684A1218950D3003FCBEA /* Debug */,
+				D30684A2218950D3003FCBEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D306846A218950D1003FCBEA /* Project object */;
+}
