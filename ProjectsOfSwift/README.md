@@ -6,5 +6,7 @@
 
 一个简单的秒表
 
+#### [Project02-CustomFont](https://github.com/BlessNeo/Swift-Guide/tree/master/ProjectsOfSwift/Project02-CustomFont)
 
+加载自定义字体
 
