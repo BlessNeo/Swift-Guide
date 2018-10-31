@@ -46,8 +46,10 @@
                                     <constraint firstAttribute="width" secondItem="ba8-ZN-A8J" secondAttribute="height" multiplier="1:1" id="MfX-3t-WEf"/>
                                     <constraint firstAttribute="height" constant="100" id="Wfi-de-pM9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Change Font"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Change Font">
+                                    <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="btnChangeFontPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZs-ZB-x3b"/>
                                 </connections>

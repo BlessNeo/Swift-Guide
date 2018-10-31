@@ -31,6 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
      3.第二、三个字体资源 Zapfino、Futura 是系统自带字体
      4.最后一个字体名为空，会取系统默认字体
      */
+    //这个数组是字体名，不是字体资源名
     var arrFontNames = ["Gaspar",
                         "Zapfino",
                         "Futura",
@@ -47,6 +48,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         btnChangeFont.layer.cornerRadius = btnChangeFont.bounds.size.height / 2.0
+        //系统字体名
+        for family in UIFont.familyNames {
+            for font in UIFont.fontNames(forFamilyName: family){
+                print(font)
+            }
+        }
     }
 
     @IBAction func btnChangeFontPressed(_ sender: Any) {
