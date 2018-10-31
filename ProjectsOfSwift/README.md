@@ -10,3 +10,6 @@
 
 加载自定义字体
 
+#### [Project03-PlayVideo](https://github.com/BlessNeo/Swift-Guide/tree/master/ProjectsOfSwift/Project03-PlayVideo)
+
+播放本地小视频
