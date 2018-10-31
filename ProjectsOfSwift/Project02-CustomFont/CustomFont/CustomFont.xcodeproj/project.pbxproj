@@ -14,6 +14,10 @@
 		D30684BA2189774E003FCBEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30684B82189774E003FCBEA /* LaunchScreen.storyboard */; };
 		D30684C52189774E003FCBEA /* CustomFontTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30684C42189774E003FCBEA /* CustomFontTests.swift */; };
 		D30684D02189774E003FCBEA /* CustomFontUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30684CF2189774E003FCBEA /* CustomFontUITests.swift */; };
+		D30684E2218978EE003FCBEA /* Gaspar Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30684DE218978EE003FCBEA /* Gaspar Regular.otf */; };
+		D30684E3218978EE003FCBEA /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30684DF218978EE003FCBEA /* MFTongXin_Noncommercial-Regular.ttf */; };
+		D30684E4218978EE003FCBEA /* MFZhiHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30684E0218978EE003FCBEA /* MFZhiHei_Noncommercial-Regular.ttf */; };
+		D30684E5218978EE003FCBEA /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D30684E1218978EE003FCBEA /* MFJinHei_Noncommercial-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		D30684CB2189774E003FCBEA /* CustomFontUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomFontUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30684CF2189774E003FCBEA /* CustomFontUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontUITests.swift; sourceTree = "<group>"; };
 		D30684D12189774E003FCBEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D30684DE218978EE003FCBEA /* Gaspar Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaspar Regular.otf"; sourceTree = "<group>"; };
+		D30684DF218978EE003FCBEA /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		D30684E0218978EE003FCBEA /* MFZhiHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFZhiHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		D30684E1218978EE003FCBEA /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 		D30684AE2189774D003FCBEA /* CustomFont */ = {
 			isa = PBXGroup;
 			children = (
+				D30684DD218978C1003FCBEA /* Fonts */,
 				D30684AF2189774D003FCBEA /* AppDelegate.swift */,
 				D30684B12189774D003FCBEA /* ViewController.swift */,
 				D30684B32189774D003FCBEA /* Main.storyboard */,
@@ -123,6 +132,17 @@
 				D30684D12189774E003FCBEA /* Info.plist */,
 			);
 			path = CustomFontUITests;
+			sourceTree = "<group>";
+		};
+		D30684DD218978C1003FCBEA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D30684DE218978EE003FCBEA /* Gaspar Regular.otf */,
+				D30684E1218978EE003FCBEA /* MFJinHei_Noncommercial-Regular.ttf */,
+				D30684DF218978EE003FCBEA /* MFTongXin_Noncommercial-Regular.ttf */,
+				D30684E0218978EE003FCBEA /* MFZhiHei_Noncommercial-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30684E3218978EE003FCBEA /* MFTongXin_Noncommercial-Regular.ttf in Resources */,
+				D30684E5218978EE003FCBEA /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
+				D30684E4218978EE003FCBEA /* MFZhiHei_Noncommercial-Regular.ttf in Resources */,
 				D30684BA2189774E003FCBEA /* LaunchScreen.storyboard in Resources */,
+				D30684E2218978EE003FCBEA /* Gaspar Regular.otf in Resources */,
 				D30684B72189774E003FCBEA /* Assets.xcassets in Resources */,
 				D30684B52189774D003FCBEA /* Main.storyboard in Resources */,
 			);
