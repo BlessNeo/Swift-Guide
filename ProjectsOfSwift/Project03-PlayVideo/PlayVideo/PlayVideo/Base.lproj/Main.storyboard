@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OcY-8h-ycC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideoListCell" rowHeight="220" id="dwO-Ab-7p4" customClass="VideoListCell" customModule="PlayVideo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dwO-Ab-7p4" id="Akc-ir-Ei5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="lOr-5W-I2O">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihk-n0-U8T">
+                                                    <rect key="frame" x="87.5" y="60" width="200" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="S7t-Ey-5sQ"/>
+                                                        <constraint firstAttribute="height" constant="100" id="taz-hh-9a0"/>
+                                                    </constraints>
+                                                    <state key="normal" image="playBtn"/>
+                                                    <connections>
+                                                        <action selector="btnPlayVideoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eqd-aE-esk"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji Among Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTC-zb-ZN4">
+                                                    <rect key="frame" x="115.5" y="175" width="144.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube - 06:32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWR-uN-UCt">
+                                                    <rect key="frame" x="148" y="200" width="79" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ihk-n0-U8T" firstAttribute="centerY" secondItem="Akc-ir-Ei5" secondAttribute="centerY" id="7o0-1g-J25"/>
+                                                <constraint firstItem="WWR-uN-UCt" firstAttribute="centerX" secondItem="Akc-ir-Ei5" secondAttribute="centerX" id="9dL-jc-98b"/>
+                                                <constraint firstItem="WWR-uN-UCt" firstAttribute="top" secondItem="iTC-zb-ZN4" secondAttribute="firstBaseline" constant="8" id="Ao7-wP-CQ8"/>
+                                                <constraint firstItem="iTC-zb-ZN4" firstAttribute="top" secondItem="Ihk-n0-U8T" secondAttribute="bottom" constant="15" id="Eis-9C-kQd"/>
+                                                <constraint firstItem="Ihk-n0-U8T" firstAttribute="centerX" secondItem="Akc-ir-Ei5" secondAttribute="centerX" id="GBi-xF-Ydf"/>
+                                                <constraint firstItem="lOr-5W-I2O" firstAttribute="top" secondItem="Akc-ir-Ei5" secondAttribute="top" id="WOB-Dz-tgc"/>
+                                                <constraint firstItem="lOr-5W-I2O" firstAttribute="leading" secondItem="Akc-ir-Ei5" secondAttribute="leading" id="cQv-h8-NwZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="lOr-5W-I2O" secondAttribute="trailing" id="hzb-wR-Mni"/>
+                                                <constraint firstAttribute="bottom" secondItem="lOr-5W-I2O" secondAttribute="bottom" id="vQV-Jn-GNW"/>
+                                                <constraint firstItem="iTC-zb-ZN4" firstAttribute="centerX" secondItem="Akc-ir-Ei5" secondAttribute="centerX" id="wyT-aq-ga1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgList" destination="lOr-5W-I2O" id="PHf-2G-nPy"/>
+                                            <outlet property="lblSource" destination="WWR-uN-UCt" id="exB-fO-uDf"/>
+                                            <outlet property="lblTitle" destination="iTC-zb-ZN4" id="T5k-ZV-pxp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="NRZ-oY-lxW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="O2V-KH-JcZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OcY-8h-ycC" secondAttribute="bottom" id="L1L-bC-VUT"/>
+                            <constraint firstItem="OcY-8h-ycC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mno-5r-NFA"/>
+                            <constraint firstItem="OcY-8h-ycC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YA7-Dg-jOc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OcY-8h-ycC" secondAttribute="trailing" id="no0-fe-MSq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="OcY-8h-ycC" id="7Pn-FE-uEY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playBtn" width="60" height="60"/>
+        <image name="videoScreenshot01" width="375" height="220"/>
+    </resources>
+</document>
