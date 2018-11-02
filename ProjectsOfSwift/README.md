@@ -17,3 +17,7 @@
 #### [Project04-Snapchat Menu](https://github.com/BlessNeo/Swift-Guide/tree/master/ProjectsOfSwift/Project04-SnapchatMenu)
 
 初识 AVFoundation [简单的拍照预览功能](https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture)
+
+#### [Project05-CarouselEffect](https://github.com/BlessNeo/Swift-Guide/tree/master/ProjectsOfSwift/Project05-CarouselEffect)
+
+CarouselEffect + 背景模糊效果(UIVisualEffectView)
