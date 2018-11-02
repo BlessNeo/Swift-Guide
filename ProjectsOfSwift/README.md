@@ -13,3 +13,7 @@
 #### [Project03-PlayVideo](https://github.com/BlessNeo/Swift-Guide/tree/master/ProjectsOfSwift/Project03-PlayVideo)
 
 播放本地小视频
+
+#### [Project04-Snapchat Menu](https://github.com/BlessNeo/Swift-Guide/tree/master/ProjectsOfSwift/Project04-SnapchatMenu)
+
+初识 AVFoundation [简单的拍照预览功能](https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture)
