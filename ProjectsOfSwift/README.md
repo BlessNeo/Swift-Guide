@@ -20,4 +20,4 @@
 
 #### [Project05-CarouselEffect](https://github.com/BlessNeo/Swift-Guide/tree/master/ProjectsOfSwift/Project05-CarouselEffect)
 
-CarouselEffect + 背景模糊效果(UIVisualEffectView)
+CarouselEffect + 背景模糊效果(`UIVisualEffectView`)
