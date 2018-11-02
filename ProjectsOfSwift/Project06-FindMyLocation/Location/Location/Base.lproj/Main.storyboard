@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Location" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="wd9-zf-EKf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlm-hv-9MC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WEM-C9-3i4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-gN-JSW">
+                                            <rect key="frame" x="20" y="20" width="335" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="50"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0t-SO-krh">
+                                            <rect key="frame" x="24.5" y="549" width="326" height="78"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                            <state key="normal" title="Find My Location" backgroundImage="findmylocation">
+                                                <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnLocationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i2U-d1-wLN"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Z0t-SO-krh" secondAttribute="bottom" constant="20" id="1Kr-fi-UYa"/>
+                                        <constraint firstAttribute="trailing" secondItem="E6c-gN-JSW" secondAttribute="trailing" constant="20" id="A0z-Mx-rWx"/>
+                                        <constraint firstItem="E6c-gN-JSW" firstAttribute="top" secondItem="WEM-C9-3i4" secondAttribute="top" constant="20" id="keQ-2G-0nM"/>
+                                        <constraint firstItem="Z0t-SO-krh" firstAttribute="centerX" secondItem="WEM-C9-3i4" secondAttribute="centerX" id="w6k-4G-Mch"/>
+                                        <constraint firstItem="E6c-gN-JSW" firstAttribute="leading" secondItem="WEM-C9-3i4" secondAttribute="leading" constant="20" id="wCk-Ra-JkW"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wd9-zf-EKf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Iic-sI-NaG"/>
+                            <constraint firstItem="Jlm-hv-9MC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jea-P7-TBf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wd9-zf-EKf" secondAttribute="trailing" id="NfZ-3O-m8u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wd9-zf-EKf" secondAttribute="bottom" id="S2y-yw-kOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jlm-hv-9MC" secondAttribute="bottom" id="cqh-BA-ufO"/>
+                            <constraint firstItem="Jlm-hv-9MC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dGV-TL-3i7"/>
+                            <constraint firstItem="wd9-zf-EKf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gVL-Hp-ZmI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jlm-hv-9MC" secondAttribute="trailing" id="o3Q-HR-OWa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblLocation" destination="E6c-gN-JSW" id="CnH-u4-dO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="750" height="1334"/>
+        <image name="findmylocation" width="326" height="78"/>
+    </resources>
+</document>
