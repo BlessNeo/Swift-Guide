@@ -32,7 +32,7 @@ class CameraCtrl: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         //这一部分知识官网介绍的很详细,是真的很详细
         //更新迭代很快
         //https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture
-        //第一步当让是请求摄像头权限
+        //第一步当然是请求摄像头权限
         //If your app uses device cameras, include the NSCameraUsageDescription key in your app’s Info.plist file.
         //在 info.plist 文件中添加 Privacy - Camera Usage Description，"有了摄像头访问权限才能预览呐"
         super.viewWillAppear(animated)

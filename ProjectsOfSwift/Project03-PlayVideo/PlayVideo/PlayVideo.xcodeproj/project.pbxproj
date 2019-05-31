@@ -207,13 +207,16 @@
 				TargetAttributes = {
 					D30684EE21899622003FCBEA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					D306850221899623003FCBEA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = D30684EE21899622003FCBEA;
 					};
 					D306850D21899623003FCBEA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = D30684EE21899622003FCBEA;
 					};
 				};
@@ -456,7 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.PlayVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -473,7 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.PlayVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -492,7 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.PlayVideoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayVideo.app/PlayVideo";
 			};
@@ -512,7 +515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.PlayVideoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayVideo.app/PlayVideo";
 			};
@@ -531,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.PlayVideoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PlayVideo;
 			};
@@ -550,7 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neozh.PlayVideoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PlayVideo;
 			};
