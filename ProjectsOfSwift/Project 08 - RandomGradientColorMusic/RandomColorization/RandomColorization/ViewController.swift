@@ -12,6 +12,10 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
+    /*
+     详细了解 CAGradientLayer
+     https://www.cnblogs.com/YouXianMing/p/3793913.html
+     */
     let gradientLayer = CAGradientLayer()
     var timer: Timer?
     var backgroundColor: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)! {
