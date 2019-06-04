@@ -24,7 +24,11 @@ class ViewController: VideoSplashViewController {
         videoFrame = view.frame
         fillMode = .resizeAspectFill
         alwaysRepeat = true
-        startTime = 2.0
+        sound = true
+        //从第2秒开始截取视频
+        startTime = 1.0
+        //视频截取长度
+        duration = 15.0
         alpha = 0.8
         contentURL = url
     }

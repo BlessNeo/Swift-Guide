@@ -91,6 +91,8 @@ class VideoSplashViewController: UIViewController {
     }
     
     fileprivate func setMoviePlayer(_ url: URL) {
+        //VideoCutter 对视频进行编辑和压缩
+        //不要VideoCutter也能正常播放视频
         let videoCutter = VideoCutter()
         videoCutter.cropVideoWithUrl(videoURl: url, startTime: startTime, duration: duration) { (videoPath, error) -> Void in
             if let path = videoPath as URL? {
