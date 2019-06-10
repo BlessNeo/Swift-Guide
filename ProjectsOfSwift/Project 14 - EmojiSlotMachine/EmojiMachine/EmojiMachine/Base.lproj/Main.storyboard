@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hyperspace" translatesAutoresizingMaskIntoConstraints="NO" id="XCH-UK-BMe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxD-Go-67i">
+                                <rect key="frame" x="20" y="144" width="374" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rVt-Gx-Ltd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="常规模式"/>
+                                <connections>
+                                    <action selector="btnAmaziongDidTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hoI-xR-gli"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ooa-ph-ZRB">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bingo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-3g-4fn">
+                                <rect key="frame" x="176.5" y="671" width="61.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="842-g0-6P3">
+                                <rect key="frame" x="20" y="606" width="374" height="45"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="1" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RIL-NV-0XW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <action selector="btnGoDidTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZ4-Tv-L5U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ooa-ph-ZRB" secondAttribute="trailing" id="1BW-9j-vDh"/>
+                            <constraint firstItem="XCH-UK-BMe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Jo-a5-TBQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XCH-UK-BMe" secondAttribute="trailing" id="B5O-R1-3Va"/>
+                            <constraint firstItem="XCH-UK-BMe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MH0-vd-Uf3"/>
+                            <constraint firstItem="Ooa-ph-ZRB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z2f-8B-iS8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UxD-Go-67i" secondAttribute="trailing" constant="20" id="a2u-Fh-wd8"/>
+                            <constraint firstItem="UxD-Go-67i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dFz-te-Z62"/>
+                            <constraint firstItem="UxD-Go-67i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hTB-Fw-PVz"/>
+                            <constraint firstItem="842-g0-6P3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iFI-dU-eYk"/>
+                            <constraint firstItem="uNV-3g-4fn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mIH-px-ZBy"/>
+                            <constraint firstItem="Ooa-ph-ZRB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oki-mA-S0u"/>
+                            <constraint firstItem="842-g0-6P3" firstAttribute="top" secondItem="Ooa-ph-ZRB" secondAttribute="bottom" constant="50" id="qYX-kR-1nh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="842-g0-6P3" secondAttribute="trailing" constant="20" id="r8m-xx-SS3"/>
+                            <constraint firstItem="uNV-3g-4fn" firstAttribute="top" secondItem="842-g0-6P3" secondAttribute="bottom" constant="20" id="yEZ-1O-41S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XCH-UK-BMe" secondAttribute="bottom" id="yPM-E0-GJz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnGo" destination="842-g0-6P3" id="7j0-OT-bWN"/>
+                        <outlet property="labResult" destination="uNV-3g-4fn" id="z3e-lf-nby"/>
+                        <outlet property="pickerViewEmoji" destination="Ooa-ph-ZRB" id="Qpu-ei-A0f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hyperspace" width="621" height="1104"/>
+    </resources>
+</document>
