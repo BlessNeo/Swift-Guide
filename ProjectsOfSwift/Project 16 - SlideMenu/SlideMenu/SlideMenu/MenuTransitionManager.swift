@@ -37,6 +37,7 @@ extension MenuTransitionManager: UIViewControllerAnimatedTransitioning {
         let toView = transitionContext.view(forKey: .to)!
         let container = transitionContext.containerView
         let moveLeft = CGAffineTransform(translationX: 250, y: 0)
+        //let moveDown = CGAffineTransform(translationX: 0, y: 400)
         let moveRight = CGAffineTransform(translationX: 0, y: 0)
         if isPresenting {
             snapshot = fromView.snapshotView(afterScreenUpdates: true)
