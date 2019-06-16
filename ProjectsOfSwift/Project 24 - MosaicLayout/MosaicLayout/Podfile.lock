@@ -1,0 +1,16 @@
+PODS:
+  - FMMosaicLayout (0.1.4)
+
+DEPENDENCIES:
+  - FMMosaicLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMMosaicLayout
+
+SPEC CHECKSUMS:
+  FMMosaicLayout: c0febf6876c987c425d7e2176d034fa7a2c98cb5
+
+PODFILE CHECKSUM: 72223f5ee8a2d5d729609238676ceb929a0d3c5c
+
+COCOAPODS: 1.6.1
