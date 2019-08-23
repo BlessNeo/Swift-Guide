@@ -23,8 +23,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        articleTableView.dataSource = self
-        articleTableView.delegate = self
+        //articleTableView.dataSource = self
+        //articleTableView.delegate = self
         articleTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         articleTableView.tableFooterView = UIView(frame: .zero)
     }
@@ -43,13 +43,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
         }
         var index = 0
-        for a in cells {
+        for a in cells
+        {
             let cell: UITableViewCell = a as UITableViewCell
             UIView.animate(withDuration: 1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-                cell.transform = CGAffineTransform(scaleX: 0, y: 0)
-            }) { (_) in
-                
-            }
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            }, completion: nil)
+            
             index += 1
         }
     }
@@ -58,7 +58,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return UIStatusBarStyle.lightContent
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
     

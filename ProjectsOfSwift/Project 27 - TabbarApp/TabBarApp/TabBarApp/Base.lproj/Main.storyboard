@@ -34,7 +34,7 @@
             <objects>
                 <navigationController id="4ms-Nt-g4z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="FriendRead" image="tabbarHomeHighlighted" id="E9i-fD-P46"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MMJ-VQ-G86">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="MMJ-VQ-G86">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="-365" y="-277"/>
         </scene>
-        <!--First View Controller-->
+        <!--FriendRead-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="TabBarApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Egf-w6-i1d">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Egf-w6-i1d">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -189,7 +189,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1D0-8e-gbV"/>
+                    <navigationItem key="navigationItem" title="FriendRead" id="1D0-8e-gbV"/>
                     <connections>
                         <outlet property="articleTableView" destination="Egf-w6-i1d" id="c8K-59-yxb"/>
                     </connections>
@@ -203,7 +203,7 @@
             <objects>
                 <navigationController id="IFA-X7-uhc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="tabbarExploreHighlighted" id="rc9-0T-XBu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MAv-d2-gUG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="MAv-d2-gUG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -220,7 +220,7 @@
             <objects>
                 <navigationController id="Ji9-zJ-mhw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ReadLater" image="tabbarProfileHighlighted" id="cHD-SW-OXX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bz4-g3-TUm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="bz4-g3-TUm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -232,17 +232,30 @@
             </objects>
             <point key="canvasLocation" x="-365" y="-1143"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Explore-->
         <scene sceneID="hJ0-Qa-S5n">
             <objects>
                 <viewController id="t7r-0P-3oI" customClass="ThirdViewController" customModule="TabBarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Bc-CK-uZU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Explore" translatesAutoresizingMaskIntoConstraints="NO" id="Z9I-TD-9ig">
+                                <rect key="frame" x="0.0" y="114.5" width="414" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z9I-TD-9ig" firstAttribute="leading" secondItem="X3F-Rb-OUj" secondAttribute="leading" id="2cw-bH-wXw"/>
+                            <constraint firstItem="Z9I-TD-9ig" firstAttribute="centerY" secondItem="5Bc-CK-uZU" secondAttribute="centerY" id="KER-MX-LRY"/>
+                            <constraint firstItem="X3F-Rb-OUj" firstAttribute="trailing" secondItem="Z9I-TD-9ig" secondAttribute="trailing" id="iY6-d2-WXE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X3F-Rb-OUj"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wgd-aN-yRH"/>
+                    <navigationItem key="navigationItem" title="Explore" id="wgd-aN-yRH"/>
+                    <connections>
+                        <outlet property="imgViewExplore" destination="Z9I-TD-9ig" id="kcR-Kr-43W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKm-e1-93c" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,10 +268,24 @@
                     <view key="view" contentMode="scaleToFill" id="BUK-Gh-Eb4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Preview1" translatesAutoresizingMaskIntoConstraints="NO" id="HGF-6p-P8j">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HGF-6p-P8j" firstAttribute="leading" secondItem="otO-4Z-Qlx" secondAttribute="leading" id="89g-7c-PWo"/>
+                            <constraint firstItem="otO-4Z-Qlx" firstAttribute="trailing" secondItem="HGF-6p-P8j" secondAttribute="trailing" id="Dcj-kV-qFy"/>
+                            <constraint firstItem="otO-4Z-Qlx" firstAttribute="bottom" secondItem="HGF-6p-P8j" secondAttribute="bottom" id="sau-CS-CFh"/>
+                            <constraint firstItem="HGF-6p-P8j" firstAttribute="top" secondItem="otO-4Z-Qlx" secondAttribute="top" id="xNC-Fv-mXP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="otO-4Z-Qlx"/>
                     </view>
                     <navigationItem key="navigationItem" id="EmI-IE-tvV"/>
+                    <connections>
+                        <outlet property="imgViewProfile" destination="HGF-6p-P8j" id="56T-8i-6er"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrK-EV-GBZ" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,6 +293,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Explore" width="375" height="667"/>
+        <image name="Preview1" width="375" height="667"/>
         <image name="allen" width="300" height="300"/>
         <image name="my workflow flow" width="512" height="282.5"/>
         <image name="tabbarExploreHighlighted" width="23" height="23"/>

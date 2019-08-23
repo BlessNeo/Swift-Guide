@@ -10,10 +10,33 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var imgViewProfile: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.isNavigationBarHidden = true
+        resetViewTransform()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.imgViewProfile.alpha = 1
+            self.imgViewProfile.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }, completion: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        resetViewTransform()
+    }
+    
+    func resetViewTransform() {
+        self.imgViewProfile.alpha = 0
+        self.imgViewProfile.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
     
 
