@@ -14,6 +14,17 @@
 		08F9BD1623116F000038888C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD1423116F000038888C /* LaunchScreen.storyboard */; };
 		08F9BD2123116F000038888C /* SpotLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9BD2023116F000038888C /* SpotLightTests.swift */; };
 		08F9BD2C23116F000038888C /* SpotLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9BD2B23116F000038888C /* SpotLightUITests.swift */; };
+		08F9BD3B2311701F0038888C /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F9BD3A2311701F0038888C /* CoreSpotlight.framework */; };
+		08F9BD3D2311702E0038888C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F9BD3C2311702E0038888C /* MobileCoreServices.framework */; };
+		08F9BD45231170B30038888C /* pixels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD3F231170B30038888C /* pixels.jpg */; };
+		08F9BD46231170B30038888C /* MoviesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD40231170B30038888C /* MoviesData.plist */; };
+		08F9BD47231170B30038888C /* jurassicworld.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD41231170B30038888C /* jurassicworld.jpg */; };
+		08F9BD48231170B30038888C /* spectre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD42231170B30038888C /* spectre.jpg */; };
+		08F9BD49231170B30038888C /* terminatorgenisys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD43231170B30038888C /* terminatorgenisys.jpg */; };
+		08F9BD4A231170B30038888C /* themartian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD44231170B30038888C /* themartian.jpg */; };
+		08F9BD4C231172110038888C /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9BD4B231172110038888C /* MovieDetailViewController.swift */; };
+		08F9BD4F2311790D0038888C /* MovieSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F9BD4D2311790D0038888C /* MovieSummaryCell.swift */; };
+		08F9BD502311790D0038888C /* MovieSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08F9BD4E2311790D0038888C /* MovieSummaryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +58,17 @@
 		08F9BD2723116F000038888C /* SpotLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F9BD2B23116F000038888C /* SpotLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotLightUITests.swift; sourceTree = "<group>"; };
 		08F9BD2D23116F000038888C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08F9BD3A2311701F0038888C /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+		08F9BD3C2311702E0038888C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		08F9BD3F231170B30038888C /* pixels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pixels.jpg; sourceTree = "<group>"; };
+		08F9BD40231170B30038888C /* MoviesData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MoviesData.plist; sourceTree = "<group>"; };
+		08F9BD41231170B30038888C /* jurassicworld.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jurassicworld.jpg; sourceTree = "<group>"; };
+		08F9BD42231170B30038888C /* spectre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spectre.jpg; sourceTree = "<group>"; };
+		08F9BD43231170B30038888C /* terminatorgenisys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = terminatorgenisys.jpg; sourceTree = "<group>"; };
+		08F9BD44231170B30038888C /* themartian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = themartian.jpg; sourceTree = "<group>"; };
+		08F9BD4B231172110038888C /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		08F9BD4D2311790D0038888C /* MovieSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSummaryCell.swift; sourceTree = "<group>"; };
+		08F9BD4E2311790D0038888C /* MovieSummaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieSummaryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F9BD3D2311702E0038888C /* MobileCoreServices.framework in Frameworks */,
+				08F9BD3B2311701F0038888C /* CoreSpotlight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +105,7 @@
 				08F9BD1F23116F000038888C /* SpotLightTests */,
 				08F9BD2A23116F000038888C /* SpotLightUITests */,
 				08F9BD0923116EFF0038888C /* Products */,
+				08F9BD392311701F0038888C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +122,16 @@
 		08F9BD0A23116EFF0038888C /* SpotLight */ = {
 			isa = PBXGroup;
 			children = (
+				08F9BD3E231170880038888C /* Resource */,
 				08F9BD0B23116EFF0038888C /* AppDelegate.swift */,
 				08F9BD0D23116EFF0038888C /* ViewController.swift */,
 				08F9BD0F23116EFF0038888C /* Main.storyboard */,
 				08F9BD1223116F000038888C /* Assets.xcassets */,
 				08F9BD1423116F000038888C /* LaunchScreen.storyboard */,
 				08F9BD1723116F000038888C /* Info.plist */,
+				08F9BD4B231172110038888C /* MovieDetailViewController.swift */,
+				08F9BD4D2311790D0038888C /* MovieSummaryCell.swift */,
+				08F9BD4E2311790D0038888C /* MovieSummaryCell.xib */,
 			);
 			path = SpotLight;
 			sourceTree = "<group>";
@@ -123,6 +152,28 @@
 				08F9BD2D23116F000038888C /* Info.plist */,
 			);
 			path = SpotLightUITests;
+			sourceTree = "<group>";
+		};
+		08F9BD392311701F0038888C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08F9BD3C2311702E0038888C /* MobileCoreServices.framework */,
+				08F9BD3A2311701F0038888C /* CoreSpotlight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08F9BD3E231170880038888C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				08F9BD41231170B30038888C /* jurassicworld.jpg */,
+				08F9BD40231170B30038888C /* MoviesData.plist */,
+				08F9BD3F231170B30038888C /* pixels.jpg */,
+				08F9BD42231170B30038888C /* spectre.jpg */,
+				08F9BD43231170B30038888C /* terminatorgenisys.jpg */,
+				08F9BD44231170B30038888C /* themartian.jpg */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +280,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F9BD48231170B30038888C /* spectre.jpg in Resources */,
 				08F9BD1623116F000038888C /* LaunchScreen.storyboard in Resources */,
 				08F9BD1323116F000038888C /* Assets.xcassets in Resources */,
+				08F9BD49231170B30038888C /* terminatorgenisys.jpg in Resources */,
+				08F9BD45231170B30038888C /* pixels.jpg in Resources */,
 				08F9BD1123116EFF0038888C /* Main.storyboard in Resources */,
+				08F9BD4A231170B30038888C /* themartian.jpg in Resources */,
+				08F9BD47231170B30038888C /* jurassicworld.jpg in Resources */,
+				08F9BD46231170B30038888C /* MoviesData.plist in Resources */,
+				08F9BD502311790D0038888C /* MovieSummaryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +315,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				08F9BD0E23116EFF0038888C /* ViewController.swift in Sources */,
+				08F9BD4C231172110038888C /* MovieDetailViewController.swift in Sources */,
 				08F9BD0C23116EFF0038888C /* AppDelegate.swift in Sources */,
+				08F9BD4F2311790D0038888C /* MovieSummaryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
