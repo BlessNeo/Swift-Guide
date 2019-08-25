@@ -89,7 +89,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "idCellMovieSummary", for: indexPath) as! MovieSummaryCell
+        let currentMovieInfo = arrMovieInfo[(indexPath as NSIndexPath).row] as! [String: String]
+        
+        cell.lblTitle.text = currentMovieInfo["Title"]!
+        cell.lblDescription.text = currentMovieInfo["Description"]!
+        cell.lblRating.text = currentMovieInfo["Rating"]!
+        cell.imgMovieImage.image = UIImage(named: currentMovieInfo["Image"]!)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMovieIndex = (indexPath as NSIndexPath).row
+        performSegue(withIdentifier: "idSegueShowMovieDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier, identifier == "idSegueShowMovieDetails" {
+            let movieDetailsViewController = segue.destination as! MovieDetailViewController
+            movieDetailsViewController.movieInfo = arrMovieInfo[selectedMovieIndex] as? [String: String]
+        }
     }
 
 
