@@ -26,6 +26,25 @@ class MovieDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        lblRating.layer.cornerRadius = lblRating.frame.size.width / 2
+        lblRating.layer.masksToBounds = true
+        if movieInfo != nil {
+            populateMovieInfo()
+        }
+    }
+    
+    func populateMovieInfo() {
+        lblTitle.text = movieInfo["Title"]!
+        lblCategory.text = movieInfo["Category"]!
+        lblDescription.text = movieInfo["Description"]!
+        lblDirector.text = movieInfo["Director"]!
+        lblStars.text = movieInfo["Stars"]!
+        lblRating.text = movieInfo["Rating"]!
+        imgMovieImage.image = UIImage(named: movieInfo["Image"]!)
+    }
+    
 
     /*
     // MARK: - Navigation

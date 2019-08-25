@@ -19,7 +19,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadMovieInfo()
+        configureTableView()
+        navigationItem.title = "Movie"
+        setupSearchableContent()
     }
     
     func loadMovieInfo() {
@@ -35,12 +38,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let searchableItemAttributeSet =
             CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
             // set the title
-            searchableItemAttributeSet.contentDescription = movie["Description"]!
+            searchableItemAttributeSet.title = movie["Title"]!
             // set the image
             let imagePathParts = movie["Image"]!.components(separatedBy: ".")
             searchableItemAttributeSet.thumbnailURL =
             Bundle.main.url(forResource: imagePathParts[0], withExtension: imagePathParts[1])
             // set the description
+            searchableItemAttributeSet.contentDescription = movie["Description"]!
+            
             var keywords = [String]()
             let movieCategories = movie["Category"]!.components(separatedBy: ", ")
             for movieCategory in movieCategories {
@@ -51,7 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 keywords.append(star)
             }
             searchableItemAttributeSet.keywords = keywords
-            let searchableItem = CSSearchableItem(uniqueIdentifier: "com.appcode.SpotIt.\(i)", domainIdentifier: "movies", attributeSet: searchableItemAttributeSet)
+            let searchableItem = CSSearchableItem(uniqueIdentifier: "com.swift.SpotLight.\(i)", domainIdentifier: "movies", attributeSet: searchableItemAttributeSet)
             searchableItems.append(searchableItem)
             
             CSSearchableIndex.default().indexSearchableItems(searchableItems) {

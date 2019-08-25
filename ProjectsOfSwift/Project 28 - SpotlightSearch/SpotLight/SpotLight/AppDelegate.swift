@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         let viewController = (window?.rootViewController as! UINavigationController).viewControllers[0] as! ViewController
-        
+        viewController.restoreUserActivityState(userActivity)
         return true
     }
 

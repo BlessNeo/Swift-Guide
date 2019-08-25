@@ -67,6 +67,7 @@
             <connections>
                 <outlet property="imgMovieImage" destination="V96-Dx-uaj" id="047-cw-wHM"/>
                 <outlet property="lblDescription" destination="Egc-fK-rz3" id="H5b-WI-cXo"/>
+                <outlet property="lblRating" destination="yzq-PL-wxu" id="W73-Ia-fZu"/>
                 <outlet property="lblTitle" destination="FdZ-BP-47q" id="sja-Fh-bgZ"/>
             </connections>
         </tableViewCell>
